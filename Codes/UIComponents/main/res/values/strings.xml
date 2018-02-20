@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UIComponents</string>
+    <integer name="javaf">11000</integer>
+    <integer name="j2eef">9500</integer>
+    <integer name="androidf">6600</integer>
+    <integer name="webf">5000</integer>
+    <integer name="sqlf">5000</integer>
+</resources>

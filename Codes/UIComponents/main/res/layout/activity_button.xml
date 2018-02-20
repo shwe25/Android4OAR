@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroung"
+    tools:context="com.example.nshwe.uicomponents.ButtonActivity">
+
+    <TextView
+        android:layout_margin="24dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fee Structure Details"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="34dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical">
+    <CheckBox
+        android:id="@+id/java"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Java"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"
+        android:textSize="26dp"/>
+    <CheckBox
+        android:id="@+id/j2ee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="J2ee"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"
+        android:textSize="26dp"/>
+    <CheckBox
+        android:id="@+id/andorid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"
+        android:textSize="26dp"/>
+    <CheckBox
+        android:id="@+id/web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Web Technology"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"
+        android:textSize="26dp"/>
+    <CheckBox
+        android:id="@+id/sql"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SQL"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"
+        android:textSize="26dp"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageBtn"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/button" />
+</LinearLayout>
