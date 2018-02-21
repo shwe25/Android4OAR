@@ -1,17 +1,24 @@
 package com.example.nshwe.uicomponents;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class ButtonActivity extends AppCompatActivity {
 
+    RadioGroup group;
+    RadioButton radioButton;
     CheckBox java,j2ee,andorid,web,sql;
-    ImageButton imageButton;
+    Button imageButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +30,7 @@ public class ButtonActivity extends AppCompatActivity {
         web = findViewById(R.id.web);
         sql = findViewById(R.id.sql);
         imageButton = findViewById(R.id.imageBtn);
+        group = findViewById(R.id.group);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +62,36 @@ public class ButtonActivity extends AppCompatActivity {
         }if(total_fee == 0){
             builder.append("Please choose any of the courses");
         }
-        Toast.makeText(this,"Fee Details\n"+builder.toString()+"\nTotal = "+total_fee,Toast.LENGTH_LONG).show();
+        radioButton = findViewById(group.getCheckedRadioButtonId());
+        if(radioButton != null) {
+            if (radioButton.getText().equals(getResources().getString(R.string.toast)))
+                disp_Toast("Fee Details\n" + builder.toString() + "\nTotal = " + total_fee);
+            else
+                disp_Alert(builder.toString() + "\nTotal = " + total_fee);
+        }else
+            disp_Toast("Choose Something to display");
+    }
+
+    private void disp_Toast(String details){
+        Toast.makeText(this,details,Toast.LENGTH_LONG).show();
+    }
+
+    private void disp_Alert(String details){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setTitle("Fee Structure")
+                .setMessage(details)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                ButtonActivity.this.finish();
+            }
+        }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
