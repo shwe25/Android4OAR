@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="24dp"
+    android:gravity="center"
+    tools:context="com.example.nshwe.uicomponents.MainActivity">
+
+    <Button
+        android:id="@+id/buttonactivity"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"/>
+    <Button
+        android:id="@+id/dateNtime"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date and Time"/>
+    <Button
+        android:id="@+id/radio"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton N CheckBox"/>
+    <Button
+        android:id="@+id/spinnerAuto"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spinner N AutoComplete"/>
+    <Button
+        android:id="@+id/browser"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Browser"/>
+
+</LinearLayout>

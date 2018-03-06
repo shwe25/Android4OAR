@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.nshwe.uicomponents.Spinner_AutoCompleteActivity">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_gravity="center"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="42dp"
+        android:layout_gravity="center"
+        android:hint="Enter your Stream"/>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_margin="42dp"
+        android:layout_gravity="center"
+        android:hint="Your Text"/>
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="nextactivity"/>
+</LinearLayout>
